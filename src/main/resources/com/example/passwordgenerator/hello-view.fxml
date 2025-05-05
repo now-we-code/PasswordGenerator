@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="481.0" prefWidth="536.0" spacing="20.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.passwordgenerator.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Label text="PASSWORD GENERATOR" textFill="#1bd4c5">
+      <font>
+         <Font size="25.0" />
+      </font>
+   </Label>
+   <AnchorPane prefHeight="411.0" prefWidth="486.0">
+      <children>
+         <Label layoutX="337.0" layoutY="79.0" text="WORD BUCKET" />
+         <VBox fx:id="phrases" layoutX="285.0" layoutY="100.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="184.0" prefWidth="194.0" scaleShape="false" styleClass="tokens" />
+         <Label layoutX="17.0" layoutY="35.0" text="Phrases:" />
+         <Label layoutX="11.0" layoutY="82.0" text="Minimum length of the Password">
+            <padding>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding></Label>
+         <TextField fx:id="phrase" layoutX="78.0" layoutY="32.0" onAction="#onAdd" prefHeight="26.0" prefWidth="284.0" />
+         <Label layoutX="11.0" layoutY="109.0" text="Number of Numeric Characters">
+            <padding>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+         </Label>
+         <Button fx:id="btn_add" layoutX="376.0" layoutY="32.0" mnemonicParsing="false" onAction="#onAdd" styleClass="btn">
+            <graphic>
+               <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@add.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </Button>
+          <Button fx:id="btn_generate" layoutX="166.0" layoutY="321.0" onAction="#onGenerate" styleClass="btn" text="Generate Password">
+            <graphic>
+               <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@generate.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </Button>
+         <TextField fx:id="password" alignment="CENTER" editable="false" layoutX="74.0" layoutY="367.0" prefHeight="26.0" prefWidth="337.0" styleClass="password" />
+         <CheckBox fx:id="leet" layoutX="12.0" layoutY="147.0" mnemonicParsing="false" styleClass="options" text=" Include LeetSpeech">
+            <padding>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </padding>
+         </CheckBox>
+         <CheckBox fx:id="spcl" layoutX="12.0" layoutY="170.0" mnemonicParsing="false" styleClass="options" text=" Include Special Character">
+            <padding>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </padding>
+         </CheckBox>
+         <RadioButton fx:id="rd_s" layoutX="13.0" layoutY="205.0" mnemonicParsing="false" selected="true" styleClass="options" text="Capitalise First Letter">
+            <padding>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </padding>
+            <toggleGroup>
+               <ToggleGroup fx:id="upper" />
+            </toggleGroup>
+         </RadioButton>
+         <RadioButton fx:id="rd_e" layoutX="13.0" layoutY="224.0" mnemonicParsing="false" styleClass="options" text="Capitalise Last Letter" toggleGroup="$upper">
+            <padding>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </padding>
+         </RadioButton>
+         <RadioButton fx:id="rd_r" layoutX="13.0" layoutY="243.0" mnemonicParsing="false" styleClass="options" text="Capitalise Random Letter" toggleGroup="$upper">
+            <padding>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </padding>
+         </RadioButton>
+         <TextField fx:id="num" layoutX="221.0" layoutY="82.0" prefHeight="26.0" prefWidth="43.0" />
+         <TextField fx:id="num1" layoutX="221.0" layoutY="109.0" prefHeight="26.0" prefWidth="43.0" />
+      </children>
+      <VBox.margin>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </VBox.margin>
+   </AnchorPane>
+</VBox>

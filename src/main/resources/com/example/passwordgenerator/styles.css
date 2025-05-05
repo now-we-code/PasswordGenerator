@@ -1,0 +1,55 @@
+.text-field {
+    -fx-faint-focus-color: transparent;
+    -fx-focus-color:rgba(0,0,0,0.8);
+}
+
+.btn{
+     -fx-background-radius: 15;
+     -fx-background-color : "#1bd4c5";
+     -fx-border-style: solid inside;
+     -fx-border-width: 1;
+     -fx-border-radius: 15;
+     -fx-border-color: black;
+     -fx-font-weight: bold;
+
+}
+
+.btn:hover {
+    -fx-background-color : rgba(46,220,154,0.8);
+}
+
+.label{
+     -fx-font-weight: bold;
+}
+
+.options{
+    -fx-faint-focus-color: transparent;
+    -fx-focus-color:rgba(0,0,0,0.8);
+     -fx-font-weight: bold;
+}
+
+.token{
+     -fx-background-radius: 15;
+     -fx-background-color : "#1bd4c5";
+     -fx-border-style: solid inside;
+     -fx-border-width: 1;
+     -fx-border-radius: 15;
+     -fx-border-color: black;
+     -fx-padding: 5;
+}
+
+.tokens{
+     -fx-border-style: solid inside;
+     -fx-border-width: 1;
+     -fx-border-radius: 15;
+     -fx-border-color: "#1bd4c5";
+     -fx-font-weight: bold;
+}
+
+.password{
+     -fx-background-color : lightgrey;
+     -fx-border-style: solid inside;
+     -fx-border-width: 1;
+     -fx-border-color: black;
+     -fx-font-weight: bold;
+}
