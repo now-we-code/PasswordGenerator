@@ -62,4 +62,23 @@ public class Phrases {
         }
         return phrase;
     }
+
+    public void removePhrase(String phrase)
+    {
+        int key  = 0;
+        boolean found = false;
+        for (int i : phraselib.keySet())
+        {
+            if (phrase.equals(phraselib.get(i)))
+            {
+                key = i;
+                found = true;
+                break;
+            }
+        }
+
+        if (found) {
+            phraselib.remove(key);
+        }
+    }
 }

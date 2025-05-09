@@ -1,10 +1,12 @@
 package com.example.passwordgenerator;
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 
 public class HelloController {
@@ -49,6 +51,13 @@ public class HelloController {
         if (!_phrase.isEmpty()) {
             Label l = new Label(_phrase);
             l.getStyleClass().add("token");
+            l.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent mouseEvent) {
+                    p.removePhrase(l.getText());
+                    phrases.getChildren().remove(l);
+                }
+            });
             phrases.getChildren().add(l);
             p.addPhrase(_phrase);
         }

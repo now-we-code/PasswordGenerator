@@ -66,4 +66,8 @@ if (specs){
     public void addPhrase(String phrase) {
         p.addPhrase(phrase);
     }
+
+    public void removePhrase(String phrase) {
+        p.removePhrase(phrase);
+    }
 }
